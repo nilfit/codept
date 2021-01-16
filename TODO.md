@@ -1,2 +1,6 @@
-- package, fix the paths.
 - might want to use fileinput https://docs.python.org/3/library/fileinput.html
+- parametrize the searcher program
+- provide terminal spawning
+    - hard to be generic
+- change from clipboard-based usage to direct insertion somehow
+    - there's probably a wayland protocol for it
