@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 #
 # invoke like `./prep-db.py </usr/share/unicode/extracted/DerivedName.txt >unicode.txt`
-#
-# TODO might want to use fileinput https://docs.python.org/3/library/fileinput.html
 
 import sys
 

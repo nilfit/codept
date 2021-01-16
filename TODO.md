@@ -1,1 +1,2 @@
-TODO package, fix the paths.
+- package, fix the paths.
+- might want to use fileinput https://docs.python.org/3/library/fileinput.html
