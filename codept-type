@@ -1,0 +1,15 @@
+#!/bin/sh
+dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+# wtype seems to stop when the terminal dies
+# passing the output through clipboard is clumsy
+# alacritty -e sh -c codept && wl-paste | wtype -
+
+#fzf <"$dir/unicode.txt" | awk '{print $1}' | wtype -s 1000 -
+selection=$(fzy -l20<"$dir/unicode.txt" | awk '{print $1}')
+if [ ! -z "$selection" ]; then
+    echo "$selection" | wtype -
+    sleep 3
+    #nohup echo "$selection" | wtype -s 1000 - & disown
+    #2>&1 >/dev/null
+fi
