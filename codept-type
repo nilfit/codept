@@ -6,7 +6,7 @@ dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 # alacritty -e sh -c codept && wl-paste | wtype -
 
 #fzf <"$dir/unicode.txt" | awk '{print $1}' | wtype -s 1000 -
-selection=$(fzy -l20<"$dir/unicode.txt" | awk '{print $1}')
+selection=$(fzf <"$dir/unicode.txt" | awk '{print $1}')
 if [ ! -z "$selection" ]; then
     echo "$selection" | wtype -
     sleep 3
